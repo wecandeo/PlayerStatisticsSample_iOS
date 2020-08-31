@@ -1,0 +1,455 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B666A6D524AF24360056962E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B666A6D424AF24360056962E /* AppDelegate.swift */; };
+		B666A6D724AF24360056962E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B666A6D624AF24360056962E /* SceneDelegate.swift */; };
+		B666A6D924AF24360056962E /* VodViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B666A6D824AF24360056962E /* VodViewController.swift */; };
+		B666A6DC24AF24360056962E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B666A6DA24AF24360056962E /* Main.storyboard */; };
+		B666A6DE24AF24370056962E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B666A6DD24AF24370056962E /* Assets.xcassets */; };
+		B666A6E124AF24370056962E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B666A6DF24AF24370056962E /* LaunchScreen.storyboard */; };
+		B66E5B6024D02FD7007CC7CE /* WecandeoSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B66880F924C81B9200DBE888 /* WecandeoSDK.framework */; };
+		B66E5B6124D02FD7007CC7CE /* WecandeoSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B66880F924C81B9200DBE888 /* WecandeoSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B66E5B6324D02FE1007CC7CE /* widevine_cdm_sdk_dev.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B66880FE24C81B9C00DBE888 /* widevine_cdm_sdk_dev.framework */; };
+		B66E5B6424D02FE1007CC7CE /* widevine_cdm_sdk_dev.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B66880FE24C81B9C00DBE888 /* widevine_cdm_sdk_dev.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B66E5B6524D02FE1007CC7CE /* widevine_cdm_sdk_insecure_dev.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B66880FF24C81B9C00DBE888 /* widevine_cdm_sdk_insecure_dev.framework */; };
+		B66E5B6624D02FE1007CC7CE /* widevine_cdm_sdk_insecure_dev.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B66880FF24C81B9C00DBE888 /* widevine_cdm_sdk_insecure_dev.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B66E5B6724D02FE1007CC7CE /* widevine_cdm_sdk_release.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B66880FD24C81B9C00DBE888 /* widevine_cdm_sdk_release.framework */; };
+		B66E5B6824D02FE1007CC7CE /* widevine_cdm_sdk_release.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B66880FD24C81B9C00DBE888 /* widevine_cdm_sdk_release.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B68E1F8F24E24FCB00CDEC38 /* LiveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B68E1F8E24E24FCB00CDEC38 /* LiveViewController.swift */; };
+		B68E1F9124E263A800CDEC38 /* Live.swift in Sources */ = {isa = PBXBuildFile; fileRef = B68E1F9024E263A800CDEC38 /* Live.swift */; };
+		B68E1F9324E26A7E00CDEC38 /* AddrInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = B68E1F9224E26A7E00CDEC38 /* AddrInfo.swift */; };
+		B68E1F9524E26C0200CDEC38 /* LiveStatistics.swift in Sources */ = {isa = PBXBuildFile; fileRef = B68E1F9424E26C0200CDEC38 /* LiveStatistics.swift */; };
+		B6AA91E724CFBE3B00A9E30A /* HttpMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6AA91E624CFBE3B00A9E30A /* HttpMethod.swift */; };
+		B6D85BA624CECAE800278A74 /* APIStatistics.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D85BA524CECAE800278A74 /* APIStatistics.swift */; };
+		B6D85BAC24CECCBC00278A74 /* Vod.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D85BAB24CECCBC00278A74 /* Vod.swift */; };
+		B6F66B6B24E0FD1C00222C46 /* VodStatistics.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6F66B6A24E0FD1C00222C46 /* VodStatistics.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		B66E5B6224D02FD7007CC7CE /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				B66E5B6124D02FD7007CC7CE /* WecandeoSDK.framework in Embed Frameworks */,
+				B66E5B6824D02FE1007CC7CE /* widevine_cdm_sdk_release.framework in Embed Frameworks */,
+				B66E5B6424D02FE1007CC7CE /* widevine_cdm_sdk_dev.framework in Embed Frameworks */,
+				B66E5B6624D02FE1007CC7CE /* widevine_cdm_sdk_insecure_dev.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		B666A6D124AF24360056962E /* wcPlayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = wcPlayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B666A6D424AF24360056962E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		B666A6D624AF24360056962E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		B666A6D824AF24360056962E /* VodViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VodViewController.swift; sourceTree = "<group>"; };
+		B666A6DB24AF24360056962E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		B666A6DD24AF24370056962E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B666A6E024AF24370056962E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		B666A6E224AF24370056962E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B66880F924C81B9200DBE888 /* WecandeoSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = WecandeoSDK.framework; sourceTree = "<group>"; };
+		B66880FD24C81B9C00DBE888 /* widevine_cdm_sdk_release.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = widevine_cdm_sdk_release.framework; path = WecandeoSDK.framework/Frameworks/widevine_cdm_sdk_release.framework; sourceTree = "<group>"; };
+		B66880FE24C81B9C00DBE888 /* widevine_cdm_sdk_dev.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = widevine_cdm_sdk_dev.framework; path = WecandeoSDK.framework/Frameworks/widevine_cdm_sdk_dev.framework; sourceTree = "<group>"; };
+		B66880FF24C81B9C00DBE888 /* widevine_cdm_sdk_insecure_dev.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = widevine_cdm_sdk_insecure_dev.framework; path = WecandeoSDK.framework/Frameworks/widevine_cdm_sdk_insecure_dev.framework; sourceTree = "<group>"; };
+		B68E1F8724E2423C00CDEC38 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		B68E1F8E24E24FCB00CDEC38 /* LiveViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveViewController.swift; sourceTree = "<group>"; };
+		B68E1F9024E263A800CDEC38 /* Live.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Live.swift; sourceTree = "<group>"; };
+		B68E1F9224E26A7E00CDEC38 /* AddrInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddrInfo.swift; sourceTree = "<group>"; };
+		B68E1F9424E26C0200CDEC38 /* LiveStatistics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveStatistics.swift; sourceTree = "<group>"; };
+		B6AA91E624CFBE3B00A9E30A /* HttpMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpMethod.swift; sourceTree = "<group>"; };
+		B6D85BA524CECAE800278A74 /* APIStatistics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIStatistics.swift; sourceTree = "<group>"; };
+		B6D85BAB24CECCBC00278A74 /* Vod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vod.swift; sourceTree = "<group>"; };
+		B6F66B6A24E0FD1C00222C46 /* VodStatistics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VodStatistics.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B666A6CE24AF24360056962E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B66E5B6024D02FD7007CC7CE /* WecandeoSDK.framework in Frameworks */,
+				B66E5B6724D02FE1007CC7CE /* widevine_cdm_sdk_release.framework in Frameworks */,
+				B66E5B6324D02FE1007CC7CE /* widevine_cdm_sdk_dev.framework in Frameworks */,
+				B66E5B6524D02FE1007CC7CE /* widevine_cdm_sdk_insecure_dev.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B666A6C824AF24360056962E = {
+			isa = PBXGroup;
+			children = (
+				B666A6D324AF24360056962E /* wcPlayer */,
+				B666A6D224AF24360056962E /* Products */,
+				B692041D24B2C60300AE9351 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		B666A6D224AF24360056962E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B666A6D124AF24360056962E /* wcPlayer.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B666A6D324AF24360056962E /* wcPlayer */ = {
+			isa = PBXGroup;
+			children = (
+				B6D85BA924CECAF700278A74 /* Statistics */,
+				B666A6D424AF24360056962E /* AppDelegate.swift */,
+				B666A6D624AF24360056962E /* SceneDelegate.swift */,
+				B666A6D824AF24360056962E /* VodViewController.swift */,
+				B68E1F8E24E24FCB00CDEC38 /* LiveViewController.swift */,
+				B666A6DA24AF24360056962E /* Main.storyboard */,
+				B666A6DD24AF24370056962E /* Assets.xcassets */,
+				B666A6DF24AF24370056962E /* LaunchScreen.storyboard */,
+				B666A6E224AF24370056962E /* Info.plist */,
+			);
+			path = wcPlayer;
+			sourceTree = "<group>";
+		};
+		B692041D24B2C60300AE9351 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B68E1F8724E2423C00CDEC38 /* AVFoundation.framework */,
+				B66880FE24C81B9C00DBE888 /* widevine_cdm_sdk_dev.framework */,
+				B66880FF24C81B9C00DBE888 /* widevine_cdm_sdk_insecure_dev.framework */,
+				B66880FD24C81B9C00DBE888 /* widevine_cdm_sdk_release.framework */,
+				B66880F924C81B9200DBE888 /* WecandeoSDK.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B6D85BA924CECAF700278A74 /* Statistics */ = {
+			isa = PBXGroup;
+			children = (
+				B6D85BAA24CECCAA00278A74 /* Model */,
+				B6D85BA524CECAE800278A74 /* APIStatistics.swift */,
+				B6F66B6A24E0FD1C00222C46 /* VodStatistics.swift */,
+				B68E1F9424E26C0200CDEC38 /* LiveStatistics.swift */,
+			);
+			path = Statistics;
+			sourceTree = "<group>";
+		};
+		B6D85BAA24CECCAA00278A74 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B6AA91E624CFBE3B00A9E30A /* HttpMethod.swift */,
+				B68E1F9224E26A7E00CDEC38 /* AddrInfo.swift */,
+				B6D85BAB24CECCBC00278A74 /* Vod.swift */,
+				B68E1F9024E263A800CDEC38 /* Live.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B666A6D024AF24360056962E /* wcPlayer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B666A6E524AF24370056962E /* Build configuration list for PBXNativeTarget "wcPlayer" */;
+			buildPhases = (
+				B666A6CD24AF24360056962E /* Sources */,
+				B666A6CE24AF24360056962E /* Frameworks */,
+				B666A6CF24AF24360056962E /* Resources */,
+				B66E5B6224D02FD7007CC7CE /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = wcPlayer;
+			productName = wcPlayer;
+			productReference = B666A6D124AF24360056962E /* wcPlayer.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B666A6C924AF24360056962E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1150;
+				LastUpgradeCheck = 1160;
+				ORGANIZATIONNAME = "서상민";
+				TargetAttributes = {
+					B666A6D024AF24360056962E = {
+						CreatedOnToolsVersion = 11.5;
+					};
+				};
+			};
+			buildConfigurationList = B666A6CC24AF24360056962E /* Build configuration list for PBXProject "wcPlayer" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B666A6C824AF24360056962E;
+			productRefGroup = B666A6D224AF24360056962E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B666A6D024AF24360056962E /* wcPlayer */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B666A6CF24AF24360056962E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B666A6E124AF24370056962E /* LaunchScreen.storyboard in Resources */,
+				B666A6DE24AF24370056962E /* Assets.xcassets in Resources */,
+				B666A6DC24AF24360056962E /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B666A6CD24AF24360056962E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B666A6D924AF24360056962E /* VodViewController.swift in Sources */,
+				B666A6D524AF24360056962E /* AppDelegate.swift in Sources */,
+				B68E1F9324E26A7E00CDEC38 /* AddrInfo.swift in Sources */,
+				B6F66B6B24E0FD1C00222C46 /* VodStatistics.swift in Sources */,
+				B6D85BA624CECAE800278A74 /* APIStatistics.swift in Sources */,
+				B6AA91E724CFBE3B00A9E30A /* HttpMethod.swift in Sources */,
+				B68E1F9524E26C0200CDEC38 /* LiveStatistics.swift in Sources */,
+				B666A6D724AF24360056962E /* SceneDelegate.swift in Sources */,
+				B68E1F8F24E24FCB00CDEC38 /* LiveViewController.swift in Sources */,
+				B6D85BAC24CECCBC00278A74 /* Vod.swift in Sources */,
+				B68E1F9124E263A800CDEC38 /* Live.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		B666A6DA24AF24360056962E /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B666A6DB24AF24360056962E /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		B666A6DF24AF24370056962E /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B666A6E024AF24370056962E /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B666A6E324AF24370056962E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		B666A6E424AF24370056962E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B666A6E624AF24370056962E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = JJL72962EQ;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/WecandeoSDK.framework/Frameworks",
+				);
+				INFOPLIST_FILE = wcPlayer/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.scenappsm.ios.wcPlayer;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		B666A6E724AF24370056962E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = JJL72962EQ;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/WecandeoSDK.framework/Frameworks",
+				);
+				INFOPLIST_FILE = wcPlayer/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.scenappsm.ios.wcPlayer;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B666A6CC24AF24360056962E /* Build configuration list for PBXProject "wcPlayer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B666A6E324AF24370056962E /* Debug */,
+				B666A6E424AF24370056962E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B666A6E524AF24370056962E /* Build configuration list for PBXNativeTarget "wcPlayer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B666A6E624AF24370056962E /* Debug */,
+				B666A6E724AF24370056962E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B666A6C924AF24360056962E /* Project object */;
+}

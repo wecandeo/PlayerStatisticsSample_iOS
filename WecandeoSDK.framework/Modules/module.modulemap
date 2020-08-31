@@ -1,0 +1,6 @@
+framework module WecandeoSDK {
+  umbrella header "WecandeoSDK.h"
+
+  export *
+  module * { export * }
+}
