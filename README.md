@@ -130,7 +130,7 @@ func completionStatistics(completion: @escaping () -> Void)
 
 ### **Player 구성방법**
 
-- 발급된 `VideoKey`로 `영상 상세정보 조회` 통해 `VideoUrl` 조회 후 <br> **Player** 구성
+- 발급된 `LiveKey`로 `영상 상세정보 조회` 통해 `VideoUrl` 조회 후 <br> **Player** 구성
 
 ### **설명**
 
