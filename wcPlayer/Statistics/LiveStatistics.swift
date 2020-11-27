@@ -21,11 +21,11 @@ class LiveStatistics {
     
     /// 영상 정보 조회
     /// - Parameters:
-    ///   - videoKey: videoKey
+    ///   - liveKey: liveKey
     ///   - completion: closuer
     ///     - addr: m3u8 포함된 주소
-    func fetchDetail(_ videoKey: String, completion: @escaping (_ addr: String) -> Void) {
-        let info = RequestInfo(url: AddrInfo().liveInfo, method: .GET, body: ["k": videoKey])
+    func fetchDetail(_ liveKey: String, completion: @escaping (_ addr: String) -> Void) {
+        let info = RequestInfo(url: AddrInfo().liveInfo, method: .GET, body: ["k": liveKey])
         APIStatistics.default.fetchData(info) { (res: Response<LiveStatsInfo>?) in
             debugPrint("[Done] fetch live detail")
             
@@ -37,10 +37,10 @@ class LiveStatistics {
     
     /// 라이브 영상 정보 조회
     /// - Parameters:
-    ///   - videoKey: videoKey
+    ///   - liveKey: liveKey
     ///   - completion: closuer
-    func fetchInfo(_ videoKey: String, completion: @escaping (_ errCode: LiveErrorCode) -> Void) {
-        let info = RequestInfo(url: AddrInfo().liveData, method: .GET, body: ["k": videoKey])
+    func fetchInfo(_ liveKey: String, completion: @escaping (_ errCode: LiveErrorCode) -> Void) {
+        let info = RequestInfo(url: AddrInfo().liveData, method: .GET, body: ["k": liveKey])
         APIStatistics.default.fetchData(info) { (res: Response<LiveStatsInfo>?) in
             debugPrint("[Done] fetch live information")
             

@@ -15,7 +15,7 @@ class LiveViewController: UIViewController {
     
     private let player = WCPlayer()
     
-    private let videoKey = "Live 영상 Video Key"
+    private let liveKey = "Live 영상 Video Key"
     private var isReady = false
     private var played = false
     
@@ -23,7 +23,7 @@ class LiveViewController: UIViewController {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
-        LiveStatistics.default.fetchInfo(videoKey) { (code) in
+        LiveStatistics.default.fetchInfo(self.liveKey) { (code) in
             switch code {
             case .NotStarted:
                 DispatchQueue.main.async {
@@ -37,7 +37,7 @@ class LiveViewController: UIViewController {
                     self.present(alert, animated: true, completion: nil)
                 }
             case .None:
-                LiveStatistics.default.fetchDetail(self.videoKey) { (addr) in
+                LiveStatistics.default.fetchDetail(self.liveKey) { (addr) in
                     DispatchQueue.main.async {
                         self.initWCDPlayer(addr)
                     }

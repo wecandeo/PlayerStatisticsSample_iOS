@@ -144,12 +144,12 @@ func completionStatistics(completion: @escaping () -> Void)
 
 - 영상 상태정보 조회
 ``` swift
-func fetchInfo(_ videoKey: String, completion: @escaping (_ errCode: LiveErrorCode) -> Void)
+func fetchInfo(_ liveKey: String, completion: @escaping (_ errCode: LiveErrorCode) -> Void)
 ```
 
 - 영상 상세정보 조회
 ``` swift
-func fetchDetail(_ videoKey: String, completion: @escaping (_ addr: String) -> Void)
+func fetchDetail(_ liveKey: String, completion: @escaping (_ addr: String) -> Void)
 ```
 
 - 재생
