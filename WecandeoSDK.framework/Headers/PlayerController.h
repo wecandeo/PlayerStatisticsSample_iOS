@@ -6,8 +6,8 @@
 //  Copyright © 2017년 scenappsm. All rights reserved.
 //
 
-#import <AVFoundation/AVFoundation.h>
 #import <UIKit/UIKit.h>
+#import <AVFoundation/AVFoundation.h>
 
 @class AVPlayer;
 @class MediaResource;
@@ -25,8 +25,8 @@
 @property (assign, nonatomic) BOOL isDismissed;
 @property (weak, nonatomic) id<PlayerControllerDelegate> delegate;
 
-@property(strong, setter=setPlayer:, getter=player) AVPlayer *player;
-@property(strong) AVPlayerItem *playerItem;
+@property (strong, setter=setPlayer:, getter=player) AVPlayer *player;
+@property (strong) AVPlayerItem *playerItem;
 @property (strong, nonatomic) NSString* videoUrl;
 
 - (instancetype)initWithMediaResource:(MediaResource *)mediaResource;
@@ -34,6 +34,8 @@
 - (void)changedFullScreen;
 - (CMTime)duration;
 - (void)moveSeek:(Float64)sec completionHandler:(void (^)(BOOL finished))completionHandler;
+- (void)setVideoGravity:(AVLayerVideoGravity)gravity;
+- (AVLayerVideoGravity)getVideoGravity;
 
 @end
 

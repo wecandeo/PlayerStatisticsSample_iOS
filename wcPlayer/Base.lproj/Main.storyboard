@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="fQb-zD-llY">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="fQb-zD-llY">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -19,14 +20,14 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="DsO-rp-lWJ">
                                 <rect key="frame" x="20" y="348" width="374" height="200"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f6i-Gh-gbi">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f6i-Gh-gbi">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="100"/>
                                         <state key="normal" title="Vod"/>
                                         <connections>
                                             <segue destination="BYZ-38-t0r" kind="show" id="XF9-PT-kO4"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yFL-Wp-TFB">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yFL-Wp-TFB">
                                         <rect key="frame" x="0.0" y="100" width="374" height="100"/>
                                         <state key="normal" title="Live"/>
                                         <connections>
@@ -39,14 +40,14 @@
                                 </constraints>
                             </stackView>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="NpD-CL-Q9Z"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="DsO-rp-lWJ" firstAttribute="centerY" secondItem="ZfY-de-ace" secondAttribute="centerY" id="9xH-4n-ldx"/>
                             <constraint firstItem="NpD-CL-Q9Z" firstAttribute="trailing" secondItem="DsO-rp-lWJ" secondAttribute="trailing" constant="20" id="GeL-PX-AjS"/>
                             <constraint firstItem="DsO-rp-lWJ" firstAttribute="centerX" secondItem="ZfY-de-ace" secondAttribute="centerX" id="I4n-On-Lzc"/>
                             <constraint firstItem="DsO-rp-lWJ" firstAttribute="leading" secondItem="NpD-CL-Q9Z" secondAttribute="leading" constant="20" id="zjP-H4-rdU"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="NpD-CL-Q9Z"/>
                     </view>
                     <navigationItem key="navigationItem" id="G4e-Fg-IbM"/>
                 </viewController>
@@ -62,15 +63,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uaV-Sq-twk" userLabel="Play&amp;Pause Button">
-                                <rect key="frame" x="20" y="433" width="30" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uaV-Sq-twk" userLabel="Play&amp;Pause Button">
+                                <rect key="frame" x="20" y="396" width="30" height="30"/>
                                 <state key="normal" title="-"/>
                                 <connections>
                                     <action selector="playNpause:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kqc-kT-AeF"/>
                                 </connections>
                             </button>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="geX-nB-y9w">
-                                <rect key="frame" x="18" y="471" width="378" height="31"/>
+                                <rect key="frame" x="18" y="434" width="378" height="31"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="daz-C3-J7Q"/>
                                 </constraints>
@@ -78,44 +79,87 @@
                                     <action selector="seek:" destination="BYZ-38-t0r" eventType="valueChanged" id="ITm-Na-qSk"/>
                                 </connections>
                             </slider>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="seG-5f-TCb">
-                                <rect key="frame" x="318" y="433" width="76" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="seG-5f-TCb">
+                                <rect key="frame" x="318" y="396" width="76" height="30"/>
                                 <state key="normal" title="Full Screen"/>
                                 <connections>
                                     <action selector="fullscreen:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kj6-oa-ELS"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q4J-AL-rDo">
-                                <rect key="frame" x="20" y="509" width="42" height="21"/>
+                                <rect key="frame" x="20" y="472" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ldd-l8-wOp" userLabel="Video Gravity">
+                                <rect key="frame" x="58" y="396" width="136" height="30"/>
+                                <state key="normal" title="Select VideoGravity"/>
+                                <connections>
+                                    <action selector="changeVideoGravity:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dG5-So-Wxj"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jfm-r0-BEb" userLabel="Video Gravity Label">
+                                <rect key="frame" x="20" y="501" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <pickerView hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="518-YP-oGV">
+                                <rect key="frame" x="0.0" y="700" width="414" height="162"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="162" id="6JY-9G-l45"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="hVd-0N-lyV"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="p57-EU-yG5"/>
+                                </connections>
+                            </pickerView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="c8E-o2-GkG" userLabel="Player View">
+                                <rect key="frame" x="0.0" y="88" width="414" height="300"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="coC-uK-gyD"/>
+                                </constraints>
+                            </view>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="jfm-r0-BEb" firstAttribute="top" secondItem="Q4J-AL-rDo" secondAttribute="bottom" constant="8" symbolic="YES" id="0VE-Mj-A2f"/>
+                            <constraint firstItem="c8E-o2-GkG" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="0hJ-CE-H06"/>
                             <constraint firstItem="Q4J-AL-rDo" firstAttribute="top" secondItem="geX-nB-y9w" secondAttribute="bottom" constant="8" id="1DV-Yz-OGW"/>
-                            <constraint firstItem="uaV-Sq-twk" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="2XZ-RC-nBl"/>
+                            <constraint firstItem="Ldd-l8-wOp" firstAttribute="leading" secondItem="uaV-Sq-twk" secondAttribute="trailing" constant="8" symbolic="YES" id="2FL-76-B17"/>
                             <constraint firstItem="geX-nB-y9w" firstAttribute="top" secondItem="uaV-Sq-twk" secondAttribute="bottom" constant="8" id="2cS-fr-70w"/>
+                            <constraint firstItem="uaV-Sq-twk" firstAttribute="top" secondItem="c8E-o2-GkG" secondAttribute="bottom" constant="8" symbolic="YES" id="CJf-JH-qtE"/>
                             <constraint firstItem="geX-nB-y9w" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="EqS-eC-6fy"/>
+                            <constraint firstItem="518-YP-oGV" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Ie9-j0-7Al"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="geX-nB-y9w" secondAttribute="trailing" constant="20" id="Jz8-bn-azV"/>
                             <constraint firstItem="uaV-Sq-twk" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="KBP-mV-u20"/>
-                            <constraint firstItem="seG-5f-TCb" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="bzh-yp-Xew"/>
+                            <constraint firstItem="Ldd-l8-wOp" firstAttribute="centerY" secondItem="uaV-Sq-twk" secondAttribute="centerY" id="KQu-zd-k8W"/>
+                            <constraint firstItem="seG-5f-TCb" firstAttribute="top" secondItem="c8E-o2-GkG" secondAttribute="bottom" constant="8" symbolic="YES" id="QUl-ex-jkX"/>
+                            <constraint firstItem="c8E-o2-GkG" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="UUF-wj-gMM"/>
+                            <constraint firstItem="c8E-o2-GkG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="UUn-5N-l2l"/>
+                            <constraint firstItem="jfm-r0-BEb" firstAttribute="leading" secondItem="Q4J-AL-rDo" secondAttribute="leading" id="XFE-OT-nFZ"/>
+                            <constraint firstItem="518-YP-oGV" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="iNg-uC-KAq"/>
                             <constraint firstItem="Q4J-AL-rDo" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="lhC-PT-pGY"/>
+                            <constraint firstItem="518-YP-oGV" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="rAZ-kf-v1b"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="seG-5f-TCb" secondAttribute="trailing" constant="20" id="yxY-21-kke"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="Zte-O9-hlP"/>
                     <connections>
+                        <outlet property="pickerView" destination="518-YP-oGV" id="Yyw-ra-dwC"/>
                         <outlet property="playNpause" destination="uaV-Sq-twk" id="aJ2-TE-K7J"/>
+                        <outlet property="playerView" destination="c8E-o2-GkG" id="6Jy-fo-A9e"/>
                         <outlet property="seek" destination="geX-nB-y9w" id="MCF-d3-9Ix"/>
                         <outlet property="seekLabel" destination="Q4J-AL-rDo" id="ABW-N3-PpI"/>
+                        <outlet property="vGravityLabel" destination="jfm-r0-BEb" id="wbo-W8-tVC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1064" y="-198"/>
+            <point key="canvasLocation" x="1063.768115942029" y="-198.21428571428569"/>
         </scene>
         <!--Live View Controller-->
         <scene sceneID="3rn-42-UlW">
@@ -125,7 +169,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TTB-Ki-761" userLabel="Play&amp;Stop Button">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TTB-Ki-761" userLabel="Play&amp;Stop Button">
                                 <rect key="frame" x="20" y="433" width="30" height="30"/>
                                 <state key="normal" title="-"/>
                                 <connections>
@@ -133,12 +177,12 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="iLY-x6-9IL"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="TTB-Ki-761" firstAttribute="centerY" secondItem="z2H-aE-WW2" secondAttribute="centerY" id="Utq-wC-HDf"/>
                             <constraint firstItem="TTB-Ki-761" firstAttribute="leading" secondItem="iLY-x6-9IL" secondAttribute="leading" constant="20" id="nsm-at-4dl"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="iLY-x6-9IL"/>
                     </view>
                     <navigationItem key="navigationItem" id="m5Y-qP-6ag"/>
                     <connections>
@@ -168,4 +212,9 @@
             <point key="canvasLocation" x="-426" y="126"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>

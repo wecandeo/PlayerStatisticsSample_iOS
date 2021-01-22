@@ -44,7 +44,7 @@ class APIStatistics {
             break
         }
         
-        request?.timeoutInterval = 60
+        request?.timeoutInterval = 3
         request?.httpMethod = info.method.rawValue
         
         let ua = String(format: "(%@; iOS %@) App/%@",
@@ -57,13 +57,15 @@ class APIStatistics {
         session.dataTask(with: req) { (data, res, error) in
             if let error = error { fatalError("Request: \(info) Failed: \(error.localizedDescription)") }
             
-            guard let resHttp = res as? HTTPURLResponse else { fatalError("URLResponse is Error") }
-            guard resHttp.statusCode == 200 else { fatalError("Response StatusCode Not 200") }
-            guard let data = data, let _ = String(data: data, encoding: .utf8) else { fatalError("Data is Error") }
+            guard let resHttp = res as? HTTPURLResponse else { fatalError() }
+            guard 200..<300 ~= resHttp.statusCode else { fatalError("HTTPURLResponse: \(resHttp)") }
+            guard let data = data, let strData = String(data: data, encoding: .utf8) else { fatalError("Data is Error") }
             
             if data.isEmpty {
                 completion(nil)
             } else {
+                print("Response Data: \(strData)")
+                
                 let decode = try? JSONDecoder().decode(Element.self, from: data)
                 completion(decode)
             }

@@ -11,15 +11,20 @@ import WecandeoSDK
 
 class VodViewController: UIViewController {
 
+    @IBOutlet weak var playerView: UIView!
     @IBOutlet weak var playNpause: UIButton!
     @IBOutlet weak var seek: UISlider!
     @IBOutlet weak var seekLabel: UILabel!
+    @IBOutlet weak var vGravityLabel: UILabel!
+    @IBOutlet weak var pickerView: UIPickerView!
     
     private let player = WCPlayer()
     private let videoKey = "Vod 영상의 Video Key"
     
     private var isReady = false //영상재생 준비여부
     private var movingSeekbar = false //seekbar 이동여부
+    
+    private let vGravities: [AVLayerVideoGravity] = [.resize, .resizeAspect, .resizeAspectFill]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,14 +40,21 @@ class VodViewController: UIViewController {
                     self.drmPlayer(gid: String(d.PlayerType.gid), pId: "DRM 영상의 배포패키지 Id", vId: String(d.videoInfo.id!)) :
                     self.nonDRMPlayer(url)
                 control!.view.translatesAutoresizingMaskIntoConstraints = false
-                self.view.addSubview(control!.view)
+                self.playerView.addSubview(control!.view)
                 
-                control!.view.leadingAnchor.constraint(equalTo: self.view.leadingAnchor).isActive = true
-                control!.view.trailingAnchor.constraint(equalTo: self.view.trailingAnchor).isActive = true
-                control!.view.topAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.topAnchor).isActive = true
-                control!.view.heightAnchor.constraint(equalTo: control!.view.widthAnchor, multiplier: 0.5625).isActive = true
+                control!.view.leadingAnchor.constraint(equalTo: self.playerView.leadingAnchor).isActive = true
+                control!.view.trailingAnchor.constraint(equalTo: self.playerView.trailingAnchor).isActive = true
+                control!.view.topAnchor.constraint(equalTo: self.playerView.topAnchor).isActive = true
+                control!.view.bottomAnchor.constraint(equalTo: self.playerView.bottomAnchor).isActive = true
             }
         }
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        let str = self.player.getVideoGravity()?.rawValue
+        self.vGravityLabel.text = str
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -67,6 +79,10 @@ class VodViewController: UIViewController {
                 VodStatistics.default.stPlay(self.player.duration())
             }
         }
+    }
+    
+    @IBAction func changeVideoGravity(_ sender: UIButton) {
+        self.pickerView.isHidden = false
     }
     
     @IBAction func seek(_ sender: UISlider) {
@@ -155,6 +171,32 @@ extension VodViewController {
             let timer = CMTimeMakeWithSeconds(0, preferredTimescale: Int32(NSEC_PER_SEC))
             self.playTimer(timer)
         }
+    }
+}
+
+//MARK: - UIPicker
+extension VodViewController: UIPickerViewDataSource, UIPickerViewDelegate {
+    
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return self.vGravities.count
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return self.vGravities[row].rawValue
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        self.pickerView.isHidden = true
+
+        let str = self.vGravities[row].rawValue
+        self.vGravityLabel.text = str
+        
+        let gravity = AVLayerVideoGravity(rawValue: str)
+        self.player.setVideoGravity(gravity)
     }
 }
 

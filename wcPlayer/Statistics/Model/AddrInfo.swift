@@ -12,9 +12,9 @@ import Foundation
 struct AddrInfo {
     let videoInfo: String = "https://api.wecandeo.com/v1/new/player/video.json"
     let videoData: String = "https://api.wecandeo.com/v1/player/stats/info.json"
-    let playLog: String = "https://couscous.wecandeo.com/api/videoPlays"
-    let sectionLog: String = "https://couscous.wecandeo.com/api/videoSections"
-    let cuePointLog: String = "https://couscous.wecandeo.com/api/videoCuePoints"
+    let playLog: String = "https://couscous.acs.wecandeo.io/play/api/videoPlays"
+    let sectionLog: String = "https://couscous.acs.wecandeo.io/video/api/videoSections"
+    let cuePointLog: String = "https://couscous.acs.wecandeo.io/video/api/videoCuePoints"
     
     let liveInfo: String = "https://api.wecandeo.com/live/new/player/info.json"    
     let liveData: String = "https://api.wecandeo.com/live/player/stats/info.json"

@@ -30,6 +30,12 @@ struct VodStatsInfo: Codable {
     
     /// 레퍼러
     var ref: String?
+        
+    /// 현재시간 (format: yyyyMMddhhmmss)
+    var cs: String?
+    
+    /// 사용자 구분값
+    var uid: String?
     
     /// 영상전체시간(초)
     var dtt: Int?

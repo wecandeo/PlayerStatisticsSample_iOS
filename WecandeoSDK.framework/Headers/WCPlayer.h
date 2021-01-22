@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import <MediaPlayer/MediaPlayer.h>
+#import <AVFoundation/AVFoundation.h>
 
 @class PlayerController;
 
@@ -56,6 +57,8 @@
 - (void)unMute;
 - (CGFloat)getVolume;
 - (void)setVolume:(CGFloat)volume;
+- (void)setVideoGravity:(AVLayerVideoGravity)gravity;
+- (AVLayerVideoGravity)getVideoGravity;
 - (void)changedFullScreen;
 - (CMTime)duration;
 - (CMTime)currentTime;
