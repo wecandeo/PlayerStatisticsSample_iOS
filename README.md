@@ -11,16 +11,16 @@
 
 - WECANDEO Player를 사용하기 위해서는 활성화 된 WECANDEO 계정이 있어야 합니다.<br> 먼저 [WECANDEO 홈페이지](https://www.wecandeo.com)에서 계정을 생성하고 플랜(Trial, Standard, Enterprise)에 [가입](https://www.wecandeo.com/pricing/videopack/edition/)하여 계정을 활성화 합니다.<br> 활성화 된 계정에 이용중인 상품이 VideoPack인 경우 VODStatistics를, LivePack인 경우 Live Player를 사용할 수 있습니다.
 
-- [WECANDEO API](https://support.wecandeo.com/developer/)를 사용하여 필요한 값을 조회합니다.
-  - [WECANDEO API](https://support.wecandeo.com/developer/)를 사용하기 위해 필요한 API Key는 활성화 된 계정의 CMS에서 확인 가능합니다. [ CMS > 계정관리 > 개발자  API ]
+- [WECANDEO API](https://support.wecandeo.com/#apis)를 사용하여 필요한 값을 조회합니다.
+  - [WECANDEO API](https://support.wecandeo.com/#apis)를 사용하기 위해 필요한 API Key는 활성화 된 계정의 CMS에서 확인 가능합니다. [ CMS > 계정관리 > 개발자  API ]
 
 - VODStatistics
-  - videoKey: [동영상 배포 코드 조회 API](https://support.wecandeo.com/developer/video-pack-api/videos/video-data/video-pub-code/)를 호출하면 videoKey를 확인할 수 있습니다.
+  - videoKey: [동영상 배포 코드 조회 API](https://support.wecandeo.com/reference/videopack-api-video-data-retrieve-video-pub-code)를 호출하면 videoKey를 확인할 수 있습니다.
   - DRM 재생을 위한 값
     - gid : [ CMS > 부가서비스 > Wecandeo DRM ] 메뉴에서 `gid`를 확인할 수 있습니다.
     - secretKey : [ CMS > 부가서비스 > Wecandeo DRM ] 메뉴에서 `secretKey`를 확인할 수 있습니다.
-    - packageId : [배포 패키지 목록 조회 API](https://support.wecandeo.com/developer/video-pack-api/publish-package/package-list/)를 호출하면 `packageId`를 확인할 수 있습니다.
-    - videoId : [동영상 목록 - 배포 패키지별 조회 API](https://support.wecandeo.com/developer/video-pack-api/videos/video-data/video-list-package/)를 호출하면 `videoId`를 확인할 수 있습니다. 
+    - packageId : [배포 패키지 목록 조회 API](https://support.wecandeo.com/reference/videopack-api-package-package-list)를 호출하면 `packageId`를 확인할 수 있습니다.
+    - videoId : [동영상 목록 - 배포 패키지별 조회 API](https://support.wecandeo.com/reference/videopack-api-video-data-retrieve-video-list-package)를 호출하면 `videoId`를 확인할 수 있습니다. 
     - client : 추가적인 사용자 암호화키, 사용자가 임의의 값으로 설정
   - **DRM 기능을 사용하기 위해서는 사용 가능한 플랜(Enterprise)에 가입되어 있어야 하며,<br> 관리자를 통해 해당 기능이 활성화 되어 있어야 합니다.**
 - LiveStatistics
